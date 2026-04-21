@@ -2,9 +2,77 @@
 <html>
 <head>
     <title> My Portfolio</title>
+
+    <style>
+        body {
+            background-color: #E6F0FF;
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            color: #1F3A5F;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background-color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .hero img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            color: #6CA6FF;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            padding: 12 px 24px;
+            background-color: #6CA6FF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #3E7BE6;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <h1> My Portfolio</h1>
-    <p> This is my new portfolio website.</p>
+
+    <div class="container">
+        <div class="hero">
+            <img src="Annie.jpeg" alt="My photo">
+    
+            <h1>Hi, I'm Annie</h1>
+    
+            <p>I am learning web developement and building my first portfolio</p>
+
+            <button>See my work</button>
+        </div>
+    </div>
 </body>
 </html>
