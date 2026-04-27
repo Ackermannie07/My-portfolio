@@ -132,7 +132,7 @@
     
             <p>I am learning web development and building my first portfolio</p>
 
-            <button onclick="showProjects()">
+            <button id="mainButton" onclick="showProjects()">
                 See my work
             </button>
         </div>
@@ -166,15 +166,20 @@
 </div>
 
     <script>
+        let visible = false;
+
         function showProjects() {
             let projects = document.getElementById("projectsSection");
+            let button = document.getElementById("mainButton");
 
             if (visible === false) {
                 projects.style.display = "block";
+                button.innerText = "Hide my work";
                 visible = true;
             } else {
                 projects.style.display = "none";
-                visible = "false";
+                button.innerText = "See my work";
+                visible = false;
             }
          
         }
