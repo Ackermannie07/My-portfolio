@@ -120,32 +120,49 @@
         #projectsSection {
             display: none;
         }
+
+        #backToTopButton {
+            display: none;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: #6CA6FF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #backToTopButton:hover {
+            background-color: #3E7BE6;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="hero">
-            <img src="Annie.jpeg" alt="My photo">
+<div class="container">
+    <div class="hero">
+        <img src="Annie.jpeg" alt="My photo">
     
-            <h1>Hello everyone, I'm Annie!</h1>
+        <h1>Hello everyone, I'm Annie!</h1>
     
-            <p>I am learning web development and building my first portfolio</p>
+        <p>I am learning web development and building my first portfolio</p>
 
-            <button id="mainButton" onclick="showProjects()">
-                See my work
-            </button>
-        </div>
+        <button id="mainButton" onclick="showProjects()">
+            See my work
+        </button>
+    </div>
 
-        <div class="about">
-            <h2>About me</h2>
+    <div class="about">
+        <h2>About me</h2>
 
-            <p>I am learning Python, HTML, CSS and JavaScript.</p>
+        <p>I am learning Python, HTML, CSS and JavaScript.</p>
 
-            <p>I enjoy creating useful and interactive websites.</p>
+        <p>I enjoy creating useful and interactive websites.</p>
 
-            <p>This portfolio is my second HTML project and I will keep improving it over time.</p>
-        </div>
+        <p>This portfolio is my second HTML project and I will keep improving it over time.</p>
+    </div>
 
     <div id="projectsSection" class="projects">
         <h3>Projects</h3>
@@ -163,6 +180,10 @@
         </div>
     </div>
 
+    <button id="backToTopButton" onclick="goToTop()">
+        Back to top
+    </button> 
+
 </div>
 
     <script>
@@ -171,20 +192,33 @@
         function showProjects() {
             let projects = document.getElementById("projectsSection");
             let button = document.getElementById("mainButton");
+            let backButton = document.getElementById ("backToTopButton");
 
             if (visible === false) {
                 projects.style.display = "block";
+                backButton.style.display = "block";
+
                 projects.scrollIntoView({
                     behavior: "smooth"
-                })
+                });
+
                 button.innerText = "Hide my work";
                 visible = true;
             } else {
                 projects.style.display = "none";
+                backButton.style.display = "none";
+
                 button.innerText = "See my work";
                 visible = false;
             }
          
+        }
+
+        function goToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
     </script>
 </body>
