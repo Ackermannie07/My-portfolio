@@ -137,6 +137,24 @@
             background-color: #3E7BE6;
             transform: scale(1.05);
         }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6CA6FF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #3E7BE6;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -149,7 +167,7 @@
     
         <p>I am learning web development and building my first portfolio</p>
 
-        <button id="mainButton" onclick="showProjects()">
+        <button id="mainButton" class="button" onclick="showProjects()">
             See my work
         </button>
     </div>
@@ -174,13 +192,13 @@
 
             <p>This is the first website I built while learning HTML and CSS.</p>
 
-            <a href="https://ackermannie07.github.io/My-first-project-/" target="_blank">
+            <a class="button" href="https://ackermannie07.github.io/My-first-project-/" target="_blank">
                 View project
             </a>
         </div>
     </div>
 
-    <button id="backToTopButton" onclick="goToTop()">
+    <button id="backToTopButton" class="button" onclick="goToTop()">
         Back to top
     </button> 
 
